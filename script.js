@@ -15,6 +15,11 @@ document.getElementById('employeeForm').addEventListener('submit', function(even
         });
         displayAddedEmployees();
         displayMessage('success', 'Employee added successfully.');
+        document.getElementById('one').value = '';
+        document.getElementById('two').value = '';
+        document.getElementById('three').value = '';
+        // Reset form
+        document.getElementById('employeeForm').reset();
 
     } else {
         displayMessage('error', 'Error: Please make sure all the fields are filled before adding an employee!');
